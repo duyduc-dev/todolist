@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.root {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: auto;
+  height: 80vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 20px 16px;
+  border-radius: 4px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-value {
+  flex: 1;
+  height: 44px;
+  background-color: #efefef;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding-left: 24px;
+}
+
+.btn-add {
+  border-radius: 4px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: #efefef;
+  border: none;
+  height: 44px;
+  width: 44px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+.btn-add:hover {
+  opacity: 0.8;
+}
+
+.btn-add:active {
+  background: #b4b3b3;
+}
+
+.body-todo-list {
+  margin-top: 10px;
+  padding-top: 24px;
+  max-height: calc(100% - 48px);
+  overflow-y: scroll;
+}
+
+.body-todo-list::-webkit-scrollbar {
+  display: none;
+}
+
+.list {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.list .item {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  margin-bottom: 8px;
+  background: #fff;
+  line-height: 44px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-delete {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #8f8f8f;
+  transition: all linear 0.1s;
+}
+
+.btn-delete:active {
+  color: #333;
+}
+.item.completed {
+  opacity: 0.5  ;
+}
+.item.completed::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  /* width: 100%; */
+  background-color: #8f8f8f;
+  top: 50%;
+  left: 10px;
+  right: 50px;
+  transform: translateY(-50%);
+}
